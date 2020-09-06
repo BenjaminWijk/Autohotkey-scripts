@@ -15,7 +15,8 @@ autorun()
     }
 }
 
-$t::
+; Toggle autorun.
+$~t::
  {
    global autorunEnabled
    autorunEnabled:=!autorunEnabled
@@ -23,6 +24,9 @@ $t::
  }
 return
 
+; W is usually the "move forward" in this case.
+; Autorun actually stops even without this trigger, 
+;   but this prevents us from having to double-press T to start autorun again
 $~w::
  {
     global autorunEnabled
